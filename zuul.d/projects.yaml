@@ -1,0 +1,10 @@
+- project:
+    name: ^.*$
+    check:
+      jobs: []
+
+- project:
+    name: devops-zuul/zuul_testing
+    check:
+      jobs:
+        - noop
