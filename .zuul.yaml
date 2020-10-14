@@ -3,7 +3,7 @@
     post-review: true
     manager: independent
     trigger:
-      github_conn:
+      github:
         - event: pull_request
           action:
             - opened
@@ -14,33 +14,44 @@
           comment:
             - '^recheck.*$'
     success:
-      github_conn:
+      github:
         comment: true
         status: success
     failure:
-      github_conn:
+      github:
         comment: true
         status: failure
     merge-failure:
-      github_conn:
+      github:
         comment: true
         status: failure
     start:
-      github_conn:
+      github:
         comment: true
         status: pending
     disabled:
-      github_conn:
+      github:
         comment: true
-
+        
+        
+- project:
+    name: ^.*$
+    check:
+      jobs: []
 
 - project:
-    name: devops-zuul/zuul-testing
+    name: devops-zuul/zuul-test-config
     check:
       jobs:
         - noop
+   
 
-- job:
-    name: base
-    parent: null
-    pre-run: base-playbook.yaml
+
+ 
+
+
+
+ 
+
+ 
+
