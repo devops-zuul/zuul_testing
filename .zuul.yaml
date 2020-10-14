@@ -40,7 +40,7 @@
       jobs: []
 
 - project:
-    name: devops-zuul/zuul-test-config
+    name: devops-zuul/zuul_testing
     check:
       jobs:
         - noop
